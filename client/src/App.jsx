@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-     <div className="min-h-screen bg-blue-50 min-w-screen">
+     <div className="min-h-screen bg-[#0a0a0a]">
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
@@ -33,18 +33,18 @@ function App() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+        <div className="border bg-blue-600/5 rounded-lg shadow-sm p-6 mb-8">
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <div className="w-full sm:w-1/2">
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-white mb-1">
                 Select Dosha
               </label>
               <select
                 value={selectedDosha}
                 onChange={(e) => setSelectedDosha(e.target.value)}
-                className="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full text-white bg-black rounded-md border border-gray-600 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-white/50"
               >
-                <option value="">All Doshas</option>
+                <option value="" className=''>All Doshas</option>
                 <option value="vata">Vata</option>
                 <option value="pitta">Pitta</option>
                 <option value="kapha">Kapha</option>
@@ -52,13 +52,13 @@ function App() {
             </div>
 
             <div className="w-full sm:w-1/2">
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-white mb-1">
                 Difficulty Level
               </label>
               <select
                 value={difficulty}
                 onChange={(e) => setDifficulty(e.target.value)}
-                className="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full text-white bg-black rounded-md border border-gray-600 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-white/50"
               >
                 <option value="">All Levels</option>
                 <option value="beginner">Beginner</option>
