@@ -1,33 +1,88 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react';
+import { Cog as Yoga, Search } from 'lucide-react';
+import { yogaPoses } from './data/poses';
+import { PoseCard } from './components/PoseCard';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedDosha, setSelectedDosha] = useState('');
+  const [difficulty, setDifficulty] = useState('');
+
+  const filteredPoses = yogaPoses.filter(pose => {
+    if (selectedDosha && !pose.ayurvedaRecommendations.some(rec => rec.dosha.includes(selectedDosha))) {
+      return false;
+    }
+    if (difficulty && pose.difficulty !== difficulty) {
+      return false;
+    }
+    return true;
+  });
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <div className="min-h-screen bg-blue-50 min-w-screen">
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Yoga className="w-8 h-8 text-green-600" />
+              <h1 className="text-2xl font-bold text-gray-900">Yoga & Ayurveda Guide</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <div className="w-full sm:w-1/2">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Select Dosha
+              </label>
+              <select
+                value={selectedDosha}
+                onChange={(e) => setSelectedDosha(e.target.value)}
+                className="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+              >
+                <option value="">All Doshas</option>
+                <option value="vata">Vata</option>
+                <option value="pitta">Pitta</option>
+                <option value="kapha">Kapha</option>
+              </select>
+            </div>
+
+            <div className="w-full sm:w-1/2">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Difficulty Level
+              </label>
+              <select
+                value={difficulty}
+                onChange={(e) => setDifficulty(e.target.value)}
+                className="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+              >
+                <option value="">All Levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {filteredPoses.length === 0 ? (
+          <div className="text-center py-12">
+            <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+            <p className="text-gray-500 text-lg">No poses found matching your criteria</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredPoses.map((pose, index) => (
+              <PoseCard key={index} pose={pose} />
+            ))}
+          </div>
+        )}
+      </main>
+    </div>
     </>
   )
 }
