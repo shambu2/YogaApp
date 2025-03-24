@@ -5,6 +5,11 @@ import { PoseCard } from './components/PoseCard';
 import './App.css'
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Signup from './pages/Signup';
 
 function App() {
   const [selectedDosha, setSelectedDosha] = useState('');
@@ -22,18 +27,8 @@ function App() {
 
   return (
     <>
-     <div className="min-h-screen ">
-      {/* <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Yoga className="w-8 h-8 text-green-600" />
-              <h1 className="text-2xl font-bold text-gray-900">Yoga & Ayurveda Guide</h1>
-            </div>
-          </div>
-        </div>
-      </header> */}
-      {/* <Navbar/> */}
+     {/* <div className="min-h-screen ">
+    
       <Hero/>
 
       <main className="max-w-full bg-[#0a0a0a] mx-auto px-4 py-8 sm:px-6 lg:px-8">
@@ -86,7 +81,14 @@ function App() {
           </div>
         )}
       </main>
-    </div>
+    </div> */}
+    <Routes>
+      <Route path='/' element={<HomePage/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+      <Route path='/contact' element={<Contact/>}/>
+
+    </Routes>
     </>
   )
 }
