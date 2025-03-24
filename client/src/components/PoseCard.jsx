@@ -1,9 +1,13 @@
 import React from 'react';
 import { Timer, Award, Leaf } from 'lucide-react';
-
+import { Link, useNavigate } from 'react-router-dom';
 export const PoseCard = ({ pose }) => {
+  const navigate = useNavigate();
   return (
-    <div className="bg-blue-700/5 border-blue-50 shadow-gray-800 backdrop-blur-3xl rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+    <div
+    onClick={() => navigate(`/pose/${encodeURI(pose.name)}`)}
+    // onClick={()=> Link(`/pose/${pose.name}`)}
+    className="bg-blue-700/5 border-blue-50 shadow-gray-800 backdrop-blur-3xl rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
       <img 
         src={pose.imageUrl} 
         alt={pose.name} 
@@ -11,7 +15,7 @@ export const PoseCard = ({ pose }) => {
       />
       <div className="p-6 ">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold text-white">{pose.name}</h2>
+          <h2 className="text-2xl font-bold text-white">{pose.name} Pose</h2>
           <span className="text-gray-300 italic">{pose.sanskrit}</span>
         </div>
         

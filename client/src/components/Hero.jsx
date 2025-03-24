@@ -2,6 +2,12 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Sparkles, ArrowRight } from "lucide-react";
 const Hero = () => {
+  const scrollToVH = () => {
+    window.scrollTo({
+      top: window.innerHeight, // 200vh (2 times the viewport height)
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="h-[100vh] bg-white ">
       <Navbar />
@@ -28,7 +34,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="flex items-center justify-center gap-2 px-8 py-4 bg-indigo-500 text-white rounded-xl hover:bg-indigo-600 transition-colors">
-              <span>Start here</span>
+              <span onClick={scrollToVH}>Start here</span>
               <ArrowRight className="h-5 w-5" />
             </button>
             <button className="px-8 py-4 bg-slate-800 text-slate-300 rounded-xl hover:bg-slate-700 transition-colors">

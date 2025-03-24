@@ -27,10 +27,9 @@ const HomePage = () => {
     return true;
   });
   return (
-    <div >
-      
+    <div>
       <Hero />
-      
+
       <div>
         <main className="max-w-full bg-[#0a0a0a] mx-auto px-4 py-8 sm:px-6 lg:px-8">
           <div className="border bg-blue-600/5 rounded-lg shadow-sm p-6 mb-8">

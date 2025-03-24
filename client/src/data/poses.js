@@ -1,6 +1,6 @@
 export const yogaPoses = [
     {
-      name: 'Mountain Pose',
+      name: 'Mountain',
       sanskrit: 'Tadasana',
       benefits: ['Improves posture', 'Strengthens thighs, knees, and ankles', 'Reduces flat feet'],
       difficulty: 'beginner',
@@ -16,7 +16,7 @@ export const yogaPoses = [
       ]
     },
     {
-      name: 'Child\'s Pose',
+      name: 'Child\'s',
       sanskrit: 'Balasana',
       benefits: ['Calms the mind', 'Relieves back pain', 'Reduces stress'],
       difficulty: 'beginner',
@@ -32,7 +32,7 @@ export const yogaPoses = [
       ]
     },
     {
-      name: 'Warrior I',
+      name: 'Warrior',
       sanskrit: 'Virabhadrasana I',
       benefits: ['Strengthens legs', 'Opens hips and chest', 'Improves focus'],
       difficulty: 'intermediate',
@@ -63,7 +63,7 @@ export const yogaPoses = [
         }
       ]
     },{
-      name: "Corpse Pose",
+      name: "Corpse",
       sanskrit: "Shavasana",
       benefits: ["Lowers blood pressure", "Reduces stress", "Promotes relaxation"],
       difficulty: "beginner",
@@ -79,7 +79,7 @@ export const yogaPoses = [
       ]
     },
     {
-      name: "Cobra Pose",
+      name: "Cobra",
       sanskrit: "Bhujangasana",
       benefits: ["Opens up lungs", "Improves breathing", "Strengthens spine"],
       difficulty: "beginner",
@@ -95,7 +95,7 @@ export const yogaPoses = [
       ]
     },
     {
-      name: "Triangle Pose",
+      name: "Triangle",
       sanskrit: "Trikonasana",
       benefits: ["Strengthens joints", "Improves flexibility", "Reduces stiffness"],
       difficulty: "intermediate",
@@ -111,7 +111,7 @@ export const yogaPoses = [
       ]
     },
     {
-      name: "Wind-Relieving Pose",
+      name: "Wind-Relieving",
       sanskrit: "Pavanamuktasana",
       benefits: ["Improves digestion", "Relieves bloating", "Eases constipation"],
       difficulty: "beginner",
@@ -127,7 +127,7 @@ export const yogaPoses = [
       ]
     },
     {
-      name: "Fish Pose",
+      name: "Fish",
       sanskrit: "Matsyasana",
       benefits: ["Stimulates thyroid gland", "Regulates metabolism", "Improves posture"],
       difficulty: "intermediate",
@@ -144,7 +144,7 @@ export const yogaPoses = [
     },
     
     {
-      name: "Boat Pose",
+      name: "Boat",
       sanskrit: "Naukasana",
       benefits: ["Strengthens core", "Burns belly fat", "Improves digestion"],
       difficulty: "intermediate",
@@ -176,7 +176,7 @@ export const yogaPoses = [
       ]
     },
     {
-      name: "Lotus Pose",
+      name: "Lotus",
       sanskrit: "Padmasana",
       benefits: ["Relieves headaches", "Calms the mind", "Reduces stress"],
       difficulty: "beginner",
@@ -195,3 +195,7 @@ export const yogaPoses = [
    
     
   ];
+
+export const poseInfo = [
+  
+]  
