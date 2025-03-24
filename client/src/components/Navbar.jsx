@@ -13,26 +13,31 @@ const Navbar = () => {
               className="rounded-full h-10 w-10 object-fill"
             />
           </div>
-          <Link to={'/'} className="text-xl text-center text-nowrap">Yoga & Ayurveda</Link>
+          <Link to={"/"} className="text-xl text-center text-nowrap">
+            Yoga & Ayurveda
+          </Link>
           {/* <p >Yoga & Ayurveda</p> */}
         </div>
-        
       </div>
       <div>
-      <div className="text-xl flex gap-20">
-          
-          <Link to={'/'} className="hover:text-white">Home</Link>
-          <Link to={'/about'} className="hover:text-white">About</Link>
-          <Link to={'/contact'} className="hover:text-white">Contact</Link>
+        <div className="text-xl flex gap-20">
+          <Link to={"/"} className="hover:text-white">
+            Home
+          </Link>
+          <Link to={"/about"} className="hover:text-white">
+            About
+          </Link>
+          <Link to={"/contact"} className="hover:text-white">
+            Contact
+          </Link>
         </div>
       </div>
-      <Link to={'/signup'}  className="mr-10">
+      <Link to={"/signup"} className="mr-10">
         <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
           <span class="relative text-nowrap px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
             Sign up
           </span>
         </button>
-        
       </Link>
     </div>
   );

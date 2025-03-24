@@ -3,6 +3,7 @@ import { Timer, Award, Leaf } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 export const PoseCard = ({ pose }) => {
   const navigate = useNavigate();
+  
   return (
     <div
     onClick={() => navigate(`/pose/${encodeURI(pose.name)}`)}

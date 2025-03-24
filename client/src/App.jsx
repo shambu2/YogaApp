@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Signup from "./pages/Signup";
 import PosePages from "./pages/PosePages";
 import Mountain from "./components/Mountain";
+import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
   // const [selectedDosha, setSelectedDosha] = useState("");
@@ -36,8 +37,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pose/:name" element={<PosePages/>}/>
-        <Route path="/pose/Seated Forward Bend" element={<Contact/>}/>
-        <Route path="/pose/Standing Forward Bend" element={<Contact/>}/>
+        {/* <Route path="/pose/Seated Forward Bend" element={<NotFoundPage/>}/> */}
+        {/* <Route path="/pose/Standing Forward Bend" element={<NotFoundPage/>}/> */}
         {/* <Route path="/poses/Mountain" element={<Mountain/>}/> */}
       </Routes>
     </>
