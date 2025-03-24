@@ -3,6 +3,8 @@ import { Cog as Yoga, Search } from 'lucide-react';
 import { yogaPoses } from './data/poses';
 import { PoseCard } from './components/PoseCard';
 import './App.css'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 function App() {
   const [selectedDosha, setSelectedDosha] = useState('');
@@ -20,8 +22,8 @@ function App() {
 
   return (
     <>
-     <div className="min-h-screen bg-[#0a0a0a]">
-      <header className="bg-white shadow-sm">
+     <div className="min-h-screen ">
+      {/* <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -30,9 +32,11 @@ function App() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+      {/* <Navbar/> */}
+      <Hero/>
 
-      <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <main className="max-w-full bg-[#0a0a0a] mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="border bg-blue-600/5 rounded-lg shadow-sm p-6 mb-8">
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <div className="w-full sm:w-1/2">
